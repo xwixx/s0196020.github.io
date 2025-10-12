@@ -1,6 +1,4 @@
-/* ===== MOBILE FIRST STYLES (сначала для мобильных) ===== */
 
-/* Базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Шапка - на мобильных всё вертикально */
+
 header {
     background-color: #2c3e50;
     color: white;
@@ -24,7 +22,7 @@ header {
 
 .header-container {
     display: flex;
-    flex-direction: column;  /* Вертикальное расположение */
+    flex-direction: column;  
     align-items: center;
     gap: 15px;
 }
@@ -47,7 +45,7 @@ header {
     text-align: center;
 }
 
-/* Навигация - вертикальный список на мобильных */
+
 nav {
     background-color: #34495e;
     padding: 15px;
@@ -62,7 +60,7 @@ nav a {
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: bold;
-    display: block;  /* Блочные элементы - вертикально */
+    display: block;  
     text-align: center;
 }
 
@@ -70,14 +68,14 @@ nav a:hover {
     background-color: #3498db;
 }
 
-/* Основной контейнер */
+
 .container {
     width: 100%;
     padding: 15px;
     background-color: white;
 }
 
-/* Общие стили для секций */
+
 .links-section,
 .table-section,
 .form-section {
@@ -94,31 +92,31 @@ nav a:hover {
     padding-bottom: 10px;
 }
 
-/* МЕНЯЕМ ПОРЯДОК ДЛЯ МОБИЛЬНЫХ: таблица выше списка ссылок */
+
 .container {
     display: flex;
     flex-direction: column;
 }
 
 .table-section {
-    order: 1;    /* Таблица ПЕРВАЯ */
+    order: 1;    
 }
 
 .links-section {
-    order: 2;    /* Ссылки ВТОРЫЕ */
+    order: 2;    
 }
 
 .form-section {
-    order: 3;    /* Форма ТРЕТЬЯ */
+    order: 3;    
 }
 
-/* Стили для таблицы на мобильных */
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 15px 0;
     font-size: 14px;
-    overflow-x: auto;  /* Горизонтальный скролл если таблица шире экрана */
+    overflow-x: auto;  
     display: block;
 }
 
@@ -149,7 +147,7 @@ table td[colspan] {
     font-weight: bold;
 }
 
-/* Стили для списков */
+
 .links-section ul, 
 .links-section ol {
     margin-left: 20px;
@@ -161,7 +159,7 @@ table td[colspan] {
     line-height: 1.5;
 }
 
-/* Стили для формы на мобильных */
+
 .form-section {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -184,10 +182,10 @@ form textarea {
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 16px; /* Увеличиваем для удобства на мобильных */
+    font-size: 16px;
 }
 
-/* Подвал */
+
 footer {
     background-color: #2c3e50;
     color: white;
@@ -196,12 +194,12 @@ footer {
     text-align: center;
 }
 
-/* ===== MEDIA QUERIES (для больших экранов) ===== */
 
-/* Планшеты (768px и выше) */
+
+
 @media (min-width: 768px) {
     .header-container {
-        flex-direction: row;      /* Горизонтальное расположение */
+        flex-direction: row;     
         justify-content: space-between;
         max-width: 960px;
         margin: 0 auto;
@@ -212,7 +210,7 @@ footer {
         font-size: 24px;
     }
     
-    /* Навигация - горизонтальная */
+   
     nav {
         padding: 0;
         background-color: transparent;
@@ -220,31 +218,31 @@ footer {
     }
     
     nav a {
-        display: inline-block;    /* Горизонтальное расположение */
+        display: inline-block;   
         margin: 0 10px;
     }
     
-    /* Контейнер с ограничением ширины */
+   
     .container {
         max-width: 960px;
         margin: 0 auto;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     
-    /* ВОЗВРАЩАЕМ ИСХОДНЫЙ ПОРЯДОК */
+    
     .links-section {
-        order: 1;    /* Ссылки ПЕРВЫЕ */
+        order: 1;    
     }
     
     .table-section {
-        order: 2;    /* Таблица ВТОРЫЕ */
+        order: 2;    
     }
     
     .form-section {
-        order: 3;    /* Форма ТРЕТЬЯ */
+        order: 3;   
     }
     
-    /* Таблица компактнее */
+   
     table {
         width: auto;
         margin: 20px auto;
@@ -263,7 +261,7 @@ footer {
     }
 }
 
-/* Десктопы (1024px и выше) */
+
 @media (min-width: 1024px) {
     .container {
         padding: 20px;
